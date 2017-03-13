@@ -2,7 +2,7 @@
 using System.Linq;
 using Treehouse.FitnessFrog.Models;
 
-namespace Treehouse.FitnessFrog.Data
+namespace RepairsApp.Data
 {
     /// <summary>
     /// Repository for activities.

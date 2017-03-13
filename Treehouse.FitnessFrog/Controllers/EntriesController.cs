@@ -4,10 +4,10 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using Treehouse.FitnessFrog.Data;
-using Treehouse.FitnessFrog.Models;
+using RepairsApp.Data;
+using RepairsApp.Models;
 
-namespace Treehouse.FitnessFrog.Controllers
+namespace RepairsApp.Controllers
 {
     public class EntriesController : Controller
     {
@@ -22,12 +22,12 @@ namespace Treehouse.FitnessFrog.Controllers
         {
             List<Entry> entries = _entriesRepository.GetEntries();
 
-            // Calculate the total activity.
+            // Calculate the total time spent doing repairs.
             double totalActivity = entries
                 .Where(e => e.Exclude == false)
                 .Sum(e => e.Duration);
 
-            // Determine the number of days that have entries.
+            // Determine the number of days that have time spent doing repairs.
             int numberOfActiveDays = entries
                 .Select(e => e.Date)
                 .Distinct()

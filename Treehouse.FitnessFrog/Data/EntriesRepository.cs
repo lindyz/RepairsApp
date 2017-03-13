@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Treehouse.FitnessFrog.Models;
+using RepairsApp.Models;
 
-namespace Treehouse.FitnessFrog.Data
+namespace RepairsApp.Data
 {
     /// <summary>
     /// The repository for entries.

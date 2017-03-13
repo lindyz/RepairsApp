@@ -1,25 +1,25 @@
-﻿namespace Treehouse.FitnessFrog.Models
+﻿namespace RepairsApp.Models
 {
     /// <summary>
-    /// Represents a physical activity.
+    /// Repairs.
     /// </summary>
-    public class Activity
+    public class Repair
     {
         /// <summary>
-        /// The list of activity types.
+        /// This is the list of the repairs
         /// </summary>
-        public enum ActivityType
+        public enum RepairType
         {
-            Basketball = 1,
-            Biking = 2,
-            Hiking = 3,
-            Kayaking = 4,
-            PokemonGo = 5,
-            Running = 6,
-            Skiing = 7,
-            Swimming = 8,
-            Walking = 9,
-            WeightLifting = 10
+            Lights = 1,
+            Tires = 2,
+            Floor = 3,
+            Roof = 4,
+            Brakes = 5,
+            Bumper = 6,
+            LicensePlate = 7,
+            Undercarriage = 8,
+            Pins = 9,
+            NoRepair = 10
         }
 
         /// <summary>
@@ -27,13 +27,13 @@
         /// </summary>
         /// <param name="activityType">The activity type for the activity.</param>
         /// <param name="name">The name for the activity.</param>
-        public Activity(ActivityType activityType, string name = null)
+        public Repair(RepairType repairType, string name = null)
         {
-            Id = (int)activityType;
+            Id = (int)repairType;
 
             // If we don't have a name argument, 
             // then use the string representation of the activity type for the name.
-            Name = name ?? activityType.ToString();
+            Name = name ?? repairType.ToString();
         }
 
         /// <summary>
