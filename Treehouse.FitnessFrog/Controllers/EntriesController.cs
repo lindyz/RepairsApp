@@ -22,7 +22,7 @@ namespace RepairsApp.Controllers
         {
             List<Entry> entries = _entriesRepository.GetEntries();
 
-            // Calculate the total time spent doing repairs.
+            // Calculate the total time spent doing repairs. 
             double totalActivity = entries
                 .Where(e => e.Exclude == false)
                 .Sum(e => e.Duration);
@@ -33,6 +33,7 @@ namespace RepairsApp.Controllers
                 .Distinct()
                 .Count();
 
+            // passing entries to view model
             ViewBag.TotalActivity = totalActivity;
             ViewBag.AverageDailyActivity = (totalActivity / (double)numberOfActiveDays);
 
@@ -43,6 +44,14 @@ namespace RepairsApp.Controllers
         {
             return View();
         }
+
+        //added an attribute
+        [ActionName("Add"), HttpPost]
+        public ActionResult AddPost()
+        {
+            return View();
+        }
+
 
         public ActionResult Edit(int? id)
         {

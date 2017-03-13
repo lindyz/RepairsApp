@@ -5,6 +5,7 @@
 
 <h2>@ViewBag.Title</h2>
 
+@*post instead of get to post it to the server*@
 <form method="post">
 
     <div class="row">
@@ -17,8 +18,13 @@
             </div>
 
             <div class="form-group">
-                <label for="ActivityId" class="control-label">Activity</label>
-                <input type="text" id="ActivityId" name="ActivityId" class="form-control" />
+                <label for="Date" class="control-label">Trailer</label>
+                <input type="text" id="Trailer" name="Trailer" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label for="RepairId" class="control-label">Repairs</label>
+                <input type="text" id="RepairId" name="RepairId" class="form-control" />
             </div>
 
             <div class="form-group">
@@ -27,7 +33,7 @@
             </div>
 
             <div class="form-group">
-                <label for="Intensity" class="control-label">Intensity</label>
+                <label for="Intensity" class="control-label">Complete?</label>
                 <input type="text" id="Intensity" name="Intensity" class="form-control" />
             </div>
 
